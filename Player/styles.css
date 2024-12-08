@@ -1,0 +1,293 @@
+@media (prefers-color-scheme: light) {
+    body {
+        background-image: url('res/1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+    }
+}
+
+@font-face {
+    font-family: 'CRSANS';
+    src: url('fonts/CRSANS.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'SFUI';
+    src: url('fonts/SF.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'PF';
+    src: url('fonts/PF.woff2') format('woff2');
+}
+
+.audio-author {
+    font-family: 'PF';
+    font-size: 25px;
+    color: #E83B0C;
+    margin: 5px 0 0 0;
+}
+
+.audio-title {
+    font-family: 'CRSANS', Arial;
+}
+
+@media (prefers-color-scheme: dark) {
+    .audio-player {
+          background-color: #333333;
+      }
+    .btn {
+          background-color: transparent;
+      }
+  }
+
+.back-home-btn svg {
+    width: 300%; /* 让 SVG 图形宽度填充整个按钮宽度 */
+    height: 300%; /* 让 SVG 图形高度填充整个按钮高度 */
+}
+
+.back-home-btn svg rect {
+    fill: white; /* 将 SVG 图形中的矩形（rect）元素填充颜色设置为白色 */
+}
+
+@media (max-width: 768px) {
+    /* 例如在较小屏幕下，可以适当增大图标尺寸、调整位置等 */
+   .back-home-btn svg {
+        width: 25px;
+        height: 25px;
+    }
+   .back-home-btn {
+        top: 15px;
+        left: 15px;
+    }
+}
+
+.back-home-btn svg {
+    width: 20px; /* 设置三角图标宽度 */
+    height: 20px; /* 设置三角图标高度 */
+}
+  
+/* 整体播放器容器样式 */
+.audio-player {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f19d85;
+    border-radius: 25pt;
+    text-align: center;
+    background-color: #ffffffb9;
+}
+
+/* 音频封面图片样式 */
+.audio-cover {
+    width: 250px;
+    height: 250px;
+    border-radius: 13px;
+    margin: 20px auto;
+}
+
+/* 音频信息（标题和作者）样式 */
+.audio-info {
+    margin-bottom: 10px;
+}
+
+.audio-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+.audio-author {
+    font-size: 14px;
+    color: #E83B0C;
+    margin: 5px 0 0 0;
+}
+
+/* 控制按钮容器样式 */
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* 按钮通用样式 */
+.btn {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* 设置按钮背景为透明 */
+}
+
+/* 播放暂停按钮内的 SVG 图片设置尺寸 */
+.btn img#playPauseImg {
+    width: 40px;
+    height: auto;
+}
+
+/* 上一首、下一首按钮内的 SVG 图片设置尺寸 */
+.btn img#prevImg,
+.btn img#nextImg {
+    width: 40px;
+    height: auto;
+}
+
+/* 音量控制条容器样式 */
+.volume-container {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 居中音量控制条 */
+}
+
+/* 喇叭 SVG 图标样式 */
+.volume-icon svg#volume-svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* 音量调节条样式 */
+.volume-bar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #E83B0C;
+    cursor: pointer;
+}
+
+/* 进度条容器样式 */
+.progress-container {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#currentTime,
+#totalTime {
+    font-family: 'SFUI', CRSANS;
+    font-size: 12px;
+    color: #666;
+}
+/* 进度条样式 */
+.progress-bar {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+/* 播放时间样式 */
+#currentTime,
+#totalTime {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 音量图标路径的过渡动画 */
+.volume-icon-path {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0; /* 默认不显示 */
+}
+
+/* 默认显示静音图标 */
+#mute-path {
+    opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    /* 整体播放器容器样式 */
+   .audio-player {
+        background-color: #333333;
+    }
+    /* 音频封面图片样式 */
+   .audio-player {
+        border: 1px solid #333;
+    }
+    /* 音频信息（标题和作者）样式 */
+   .audio-player {
+        color: #fff;
+    }
+    /* 按钮通用样式 */
+   .btn {
+        background-color: #ffffff00;
+    }
+    /* 音量调节条样式 */
+   .volume-bar {
+        background-color: #444;
+    }
+    /* 进度条样式 */
+   .progress-bar {
+        background-color: #444;
+    }
+    /* 播放时间样式 */
+    #currentTime,
+    #totalTime {
+        color: #fff;
+    }
+    /* 音量图标路径的过渡动画 */
+   .volume-icon-path {
+        color: #fff;
+    }
+}.dark-mode {
+    /* 整体播放器容器样式 */
+    background-color: #333333;
+    /* 音频封面图片样式 */
+    border: 1px solid #E83B0C;
+    /* 音频信息（标题和作者）样式 */
+    color: #fff;
+    /* 按钮通用样式 */
+    background-color: #ffffff00;
+    /* 音量调节条样式 */
+    background-color: #444;
+    /* 进度条样式 */
+    background-color: #747171;
+    /* 播放时间样式 */
+    color: #a7a7a7;
+    /* 音量图标路径的过渡动画 */
+    color: #a7a7a7;
+}
+
+.dark-mode.audio-player {
+    background-color: #333333;
+}
+
+.dark-mode.btn {
+    background-color: transparent;
+}
