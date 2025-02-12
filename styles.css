@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'CRSANS';
+    src: url('fonts/CRSANS.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'SFUI';
+    src: url('fonts/SF.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'PF';
+    src: url('fonts/PF.woff2') format('woff2');
+}
+
+/* 全局样式 */
+body {
+    font-family: 'PF', PingFang SC, 微软雅黑;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(15deg, #ff4800, #ffc400);
+    background-size: cover; /* 背景图覆盖整个页面 */
+    background-repeat: no-repeat; /* 背景图不重复 */
+    background-attachment: fixed; /* 背景图固定，不随页面滚动而滚动 */
+}
+
+/* 导航栏样式 */
+header {
+    color: #E83B0C; /* 设置导航栏文字颜色为 #E83B0C */
+    padding: 0; /* 移除顶部和底部的内边距 */
+    height: 80px; /* 设置导航栏高度为80px */
+    display: flex; /* 使用弹性布局 */
+    align-items: center; /* 垂直居中对齐 */
+} 
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left; /* 保持居左对齐 */
+    line-height: 80px; /* 设置行高为80px，使文本垂直居中 */
+    display: flex; /* 使用弹性布局 */
+    align-items: center; /* 垂直居中对齐 */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px; /* 根据需要调整间距 */
+}
+
+/* 导航栏样式 */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* 导航栏右侧链接组样式 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 将链接组推到右侧 */
+}
+
+/* logo样式 */
+.logo img {
+    width: 180px; /* 设置logo的宽度 */
+    height: 180px; /* 设置logo的高度 */
+    margin-left: 40px; /* 设置logo距离屏幕左侧40px */
+    margin-right: 10px; /* 可选：添加一些间距 */
+}
+
+/* 导航项样式 */
+.nav-item, .nav-button {
+    padding: 10px 20px; /* 设置按钮的内边距 */
+    color: #ffffff; /* 设置按钮的文字颜色为 #E83B0C */
+    text-decoration: none; /* 移除下划线 */
+    cursor: pointer; /* 设置鼠标指针为手型 */
+}
+
+/* 按钮样式 */
+.nav-button {
+    background-color: transparent; /* 设置按钮的背景颜色为透明 */
+    border: none; /* 移除边框 */
+    border-radius: 0; /* 移除圆角半径 */
+    margin-left: 15px; /* 按钮之间的间距 */
+    text-decoration: none;
+    color: #FFFFFF; /* 设置按钮文字颜色与“首页”相同 */
+    font-family: 'PF', PingFang SC, 微软雅黑; /* 设置按钮字体与“首页”相同 */
+    font-size: inherit; /* 继承父元素的字体大小 */
+    font-weight: inherit; /* 继承父元素的字体粗细 */
+}
+
+
+/* 图标样式 */
+.logo {
+    margin-right: 15px; /* 设置图标与导航栏链接之间的间距 */
+}
+
+.logo svg {
+    width: 30px; /* 设置图标的宽度 */
+    height: 30px; /* 设置图标的高度 */
+    fill: #E83B0C; /* 设置图标的填充颜色为 #E83B0C */
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255); /* 设置导航栏链接文字颜色为 #E83B0C */
+    text-decoration: none;
+}
+
+/* 轮播图样式 */
+#carousel {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#carousel img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 内容区域样式 */
+main {
+    padding: 20px;
+}
+
+article {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+article h2 {
+    color: #333;
+}
+
+article p {
+    color: #666;
+}
+
+
+.footer p {
+    margin: 0;
+}
+
+/* footer样式 */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-family: "PF";
+    font-size: 12px;
+    color: #ffffff;
+    position: absolute;
+    width: 100%;
+}
+
+/* 导航栏右侧链接组样式 */
+.nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 将链接组推到右侧 */
+}
+
+/* 导航栏按钮样式 */
+.nav-button {
+    margin-left: 20px; /* 按钮之间的间距 */
+    text-decoration: none;
+    color: #FFFFFF; /* 设置按钮文字颜色与“首页”相同 */
+    font-family: 'PF', PingFang SC, 微软雅黑; /* 设置按钮字体与“首页”相同 */
+    font-size: inherit; /* 继承父元素的字体大小 */
+    font-weight: inherit; /* 继承父元素的字体粗细 */
+}
+
+
+.auth-buttons {
+    margin-right: 80px; /* 距离右侧80px */
+    display: flex;
+}
+
+.auth-button {
+    padding: 8px 12px;
+    margin-left: 8px; /* 按钮之间的间隔 */
+    text-decoration: none;
+    color: white;
+    background-color: #e83c0c00; /* 按钮背景颜色 */
+    border-radius: 12.5px; /* 按钮圆角 */
+    transition: background-color 0.3s, transform 0.3s; /* 添加缩放效果的过渡时间 */
+}
+
+.auth-button:hover {
+    background-color: #ff000054; /* 鼠标悬停时按钮背景颜色 */
+    transform: scale(1.05); /* 鼠标悬停时按钮放大 */
+}
+
+.auth-button:active {
+    transform: scale(0.95); /* 按钮点击时缩小 */
+    transition: transform 0s; /* 点击时立即缩小，不添加过渡时间 */
+}
+
+/* 内容区域样式 */
+main {
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 子元素在交叉轴上两端对齐 */
+    padding: 20px;
+    flex-wrap: wrap; /* 允许子元素换行 */
+}
+
+/* 页面容器样式 */
+.resource-container {
+    flex: 1; /* 子元素占据相等的空间 */
+    margin: 10px; /* 子元素间距 */
+    background-color: #fff;
+    border-radius: 13px;
+    min-height: 400px; /* 设置最小高度为400px，可根据实际需求调整 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    justify-content: flex-start; /* 从容器的顶部开始排列子元素 */
+    align-items: flex-start; /* 从容器的左侧开始排列子元素 */
+    padding: 30px; /* 容器的内边距 */
+}
+
+/* 适配小屏幕设备，当屏幕宽度小于768px时，容器变为块级元素，垂直排列 */
+@media (max-width: 768px) {
+    .resource-container {
+        flex: 100%; /* 每个容器占据整行 */
+        margin: 10px 0; /* 调整上下间距 */
+    }
+}
+
+.resource-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E83B0C; /* 按钮背景颜色 */
+    color: white; /* 文字颜色 */
+    text-decoration: none; /* 移除下划线 */
+    border-radius: 5px; /* 圆角 */
+    transition: background-color 0.3s, transform 0.3s; /* 添加过渡效果 */
+}
+
+.resource-link:hover {
+    background-color: #ff0000; /* 鼠标悬停时的背景颜色 */
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+}
+
+.resource-link:active {
+    transform: scale(0.95); /* 点击时缩小 */
+}
+
+.resource-container {
+    flex: 1; /* 子元素占据相等的空间 */
+    margin: 10px; /* 子元素间距 */
+    background-color: #fff;
+    border-radius: 13px;
+    min-height: 400px; /* 设置最小高度为400px，可根据实际需求调整 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex; /* 使用flex布局 */
+    flex-direction: row; /* 子元素水平排列 */
+    justify-content: space-between; /* 从容器的左侧开始排列子元素，最后一个元素会到右侧 */
+    align-items: flex-start; /* 从容器的顶部开始排列子元素 */
+    padding: 30px; /* 容器的内边距 */
+}
+
+.resource-content {
+    flex: 1; /* 子元素占据相等的空间 */
+    margin-right: 20px; /* 文本和按钮之间的间距 */
+}
+
+.resource-link {
+    align-self: flex-end; /* 将按钮推到容器的右侧 */
+}
+
+.resource-container {
+    flex: 1; /* 子元素占据相等的空间 */
+    margin: 10px; /* 子元素间距 */
+    background-color: #fff; /* 原有的白色背景 */
+    border-radius: 26px; /* 圆角 */
+    min-height: 400px; /* 设置最小高度为400px，可根据实际需求调整 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 阴影 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: row; /* 子元素水平排列 */
+    justify-content: space-between; /* 从容器的左侧开始排列子元素，最后一个元素会到右侧 */
+    align-items: flex-start; /* 从容器的顶部开始排列子元素 */
+    padding: 30px; /* 容器的内边距 */
+    position: relative; /* 设置相对定位，以便背景图绝对定位 */
+    background-image: url('./res/icons.svg'); /* 添加背景图 */
+    background-position: center; /* 背景图居中 */
+    background-repeat: no-repeat; /* 背景图不重复 */
+    background-size: contain; /* 背景图适应容器大小 */
+    background-blend-mode: multiply; /* 背景图与背景色混合模式 */
+}
+
+.resource-content {
+    flex: 1; /* 子元素占据相等的空间 */
+    margin-right: 20px; /* 文本和按钮之间的间距 */
+}
+
+.resource-link {
+    align-self: flex-end; /* 将按钮推到容器的右侧 */
+}
+
+.resource-container {
+    flex: 1; /* 子元素占据相等的空间 */
+    margin: 10px; /* 子元素间距 */
+    background-color: #fff; /* 原有的白色背景 */
+    border-radius: 26px; /* 圆角 */
+    min-height: 400px; /* 设置最小高度为400px，可根据实际需求调整 */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* 阴影 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: row; /* 子元素水平排列 */
+    justify-content: space-between; /* 从容器的左侧开始排列子元素，最后一个元素会到右侧 */
+    align-items: flex-start; /* 从容器的顶部开始排列子元素 */
+    padding: 30px; /* 容器的内边距 */
+    position: relative; /* 设置相对定位，以便背景图绝对定位 */
+}
+
+.teacher-resource {
+    background-image: url('./res/icons.svg'); /* 添加背景图 */
+    background-position: center; /* 背景图居中 */
+    background-repeat: no-repeat; /* 背景图不重复 */
+    background-size: contain; /* 背景图适应容器大小 */
+    background-blend-mode: multiply; /* 背景图与背景色混合模式 */
+}
+
+.value-resource {
+    background-image: url('./res/纸箱.png'); /* 添加背景图 */
+    background-position: center; /* 背景图居中 */
+    background-repeat: no-repeat; /* 背景图不重复 */
+    background-size: contain; /* 背景图适应容器大小 */
+    background-blend-mode: multiply; /* 背景图与背景色混合模式 */
+}
+
+.resource-content {
+    flex: 1; /* 子元素占据相等的空间 */
+    margin-right: 20px; /* 文本和按钮之间的间距 */
+}
+
+.resource-link {
+    align-self: flex-end; /* 将按钮推到容器的右侧 */
+}
