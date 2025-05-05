@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desktop-styles copy.css">
+    <title>双微教研-录音播放</title>
+    <link rel="icon" href="../res/logo.ico" type="image/x-icon">
+</head>
+<script>
+    if (window.innerWidth <= 768) {
+        // 移动端
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'mobile-styles.css';
+        document.head.appendChild(link);
+    } else {
+        // 电脑端
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'desktop-styles copy.css';
+        document.head.appendChild(link);
+    }
+</script>
+<body>
+    <a href="https://cr-choring.github.io" class="back-home-btn">
+        <?xml version="1.0" encoding="utf-8"?>
+        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+        <svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             viewBox="0 0 595.279 841.89" enable-background="new 0 0 595.279 841.89"
+             xml:space="preserve">
+            <rect x="103.74" y="390.537" width="281.987" height="37.499"/>
+            <rect x="64.344" y="321.32" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -187.5232 227.4168)" width="232.824" height="37.498"/>
+            <rect x="64.133" y="459.697" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 -29.8968 944.5079)" width="233.063" height="37.498"/>
+        </svg>
+    </a>
+
+
+
+    <div class="white-rectangle">
+            
+        <div class="book-div">
+            <div class="left-half">
+                <img src="http://p2.music.126.net/8DCTCnLuxtpu1SvTKxPNWQ==/109951165328685813.jpg?param=400y400" alt="Audio Cover"
+                class="audio-cover">
+            </div>
+            <div class="right-half">
+                <div class="book-title">闽教中心 2025连接中考 
+                <p class="book-class">英语学科</p>
+                <p class="book-author">福建省宏图伟业文化发展有限公司</p></div>
+            </div>
+            <a href="res/2025/HTWY/LJZK/ENG/index.html" class="resource-link"> <i class="fa fa-arrow-right"></i>
+            </a>
+        </div>
+
+
+
+
+    
+    <div class="parent-container">
+        <img src="..\res\logow.svg" alt="Company Logo" class="company-logo">
+    <div class="audio-player">
+        <!-- 播放器原本的内部元素，如音频封面、信息、控制按钮等 -->
+        <img src="http://p2.music.126.net/8DCTCnLuxtpu1SvTKxPNWQ==/109951165328685813.jpg?param=400y400" alt="Audio Cover"
+            class="audio-cover">
+        <div class="audio-info">
+            <h3 class="audio-title">给某某</h3>
+            <p class="audio-author">马里奥 陈亦洺</p>
+        </div>
+        <audio id="myAudio"
+            src="https://dlink.host/lanzou/aHR0cHM6Ly93d2FhYS5sYW56b3VxLmNvbS9pWFU0QjJubDA3OGgmcGFzc0NvZGU9NGg3NA.mp3"> 
+        </audio>
+        <div class="controls">
+            <button id="prevButton" class="btn">
+                <img id="prevImg" src="..\res\3.svg" alt="Previous">
+            </button>
+            <button id="playPauseButton" class="btn">
+                <img id="playPauseImg" src="1.svg" alt="Play or Pause">
+            </button>
+            <button id="nextButton" class="btn">
+                <img id="nextImg" src="..\res\4.svg" alt="Next">
+            </button>
+        </div>
+        <div class="progress-container">
+            <span id="currentTime">0:00</span>
+            <input type="range" class="progress-bar" id="progress" min="0">
+            <span id="totalTime">0:00</span>
+        </div>
+        <div class="volume-container">
+            <span class="volume-icon">
+                <svg viewBox="0 0 595.279 841.89" xmlns="http://www.w3.org/2000/svg" id="volume-svg">
+                    <!-- 静音图标 -->
+                    <path class="volume-icon-path" id="mute-path" d="M153.281,315.223l128.326-79.206c14.871-9.175,34.453-4.711,43.749,9.969c3.156,4.984,4.826,10.744,4.826,16.617v330.97c0,17.32-14.217,31.354-31.748,31.354c-5.95,0-11.779-1.65-16.827-4.762l-128.326-79.213H95.244c-24.547,0-44.447-19.65-44.447-43.895V359.119c0-24.243,19.9-43.895,44.447-43.895L153.281,315.223L153.281,315.223zM168.837,349.988c-3.035,1.87-6.531,2.859-10.096,2.857H95.244c-3.505,0-6.35,2.806-6.35,6.273v137.945c0,3.461,2.845,6.273,6.35,6.273h63.497c3.568,0,7.067,0.992,10.096,2.857l123.247,76.064V273.918L168.837,349.988L168.837,349.988z"/>
+                    <!-- 低音图标 -->
+                    <path class="volume-icon-path" id="low-path" d="M153.281,315.223l128.326-79.206c14.871-9.175,34.453-4.711,43.749,9.969c3.156,4.984,4.826,10.744,4.826,16.617v330.97c0,17.32-14.217,31.354-31.748,31.354c-5.95,0-11.779-1.65-16.827-4.762l-128.326-79.213H95.244c-24.547,0-44.447-19.65-44.447-43.895V359.119c0-24.243,19.9-43.895,44.447-43.895L153.281,315.223L153.281,315.223z M168.837,349.988c-3.035,1.87-6.531,2.859-10.096,2.857H95.244c-3.505,0-6.35,2.806-6.35,6.273v137.945c0,3.461,2.845,6.273,6.35,6.273h63.497c3.568,0,7.067,0.992,10.096,2.857l123.247,76.064V273.918L168.837,349.988L168.837,349.988z M413.128,542.064c-7.673,7.146-19.657,6.824-26.936-0.723c-7.144-7.42-6.919-19.227,0.5-26.369c0.078-0.076,0.157-0.15,0.236-0.225c51.331-47.984,51.331-125.342,0-173.333c-7.543-7.013-7.973-18.813-0.96-26.356c0.074-0.08,0.148-0.158,0.224-0.236c7.278-7.548,19.263-7.87,26.936-0.724c67.198,62.83,67.198,165.143,0,227.971V542.064z"/>
+                    <!-- 中音图标 -->
+                    <path class="volume-icon-path" id="mid-path" d="M476.764,617.181c-7.6,7.219-19.582,7.02-26.936-0.451c-7.223-7.338-7.13-19.141,0.208-26.363c0.082-0.082,0.165-0.162,0.249-0.242c93.848-89.568,93.848-234.518,0-324.086c-7.469-7.087-7.778-18.887-0.691-26.355c0.077-0.082,0.155-0.163,0.234-0.243c7.354-7.47,19.336-7.67,26.936-0.451C586.105,343.346,586.105,512.824,476.764,617.181L476.764,617.181z M413.128,542.064c-7.673,7.146-19.657,6.824-26.936-0.723c-7.144-7.42-6.919-19.227,0.5-26.369c0.078-0.076,0.157-0.15,0.236-0.225c51.331-47.984,51.331-125.342,0-173.333c-7.543-7.013-7.973-18.813-0.96-26.356c0.074-0.08,0.148-0.158,0.224-0.236c7.278-7.548,19.263-7.87,26.936-0.724c67.198,62.83,67.198,165.143,0,227.971V542.064z"/>
+                    <!-- 高音图标 -->
+                    <path class="volume-icon-path" id="high-path" d="M476.764,617.181c-7.6,7.219-19.582,7.02-26.936-0.451c-7.223-7.338-7.13-19.141,0.208-26.363c0.082-0.082,0.165-0.162,0.249-0.242c93.848-89.568,93.848-234.518,0-324.086c-7.469-7.087-7.778-18.887-0.691-26.355c0.077-0.082,0.155-0.163,0.234-0.243c7.354-7.47,19.336-7.67,26.936-0.451C586.105,343.346,586.105,512.824,476.764,617.181L476.764,617.181z M546.89,676.237c-6,4.459-21.084,2.667-24.417-1.25c-9.545-9.698-5.562-19.854,4.136-29.399c0.108-0.108,0.219-0.214,0.33-0.32c124.021-118.366,126.055-311.913,2.033-430.28c-9.871-9.366-14.699-20.567-5.333-30.438c0.102-0.108,2.591-2.617,2.694-2.723c10.473-7.339,14.641-4.676,26.973,2.994c144.497,137.911,143.83,348.588-0.667,486.5L546.89,676.237z M413.128,542.064c-7.673,7.146-19.657,6.824-26.936-0.723c-7.144-7.42-6.919-19.227,0.5-26.369c0.078-0.076,0.157-0.15,0.236-0.225c51.331-47.984,51.331-125.342,0-173.333c-7.543-7.013-7.973-18.813-0.96-26.356c0.074-0.08,0.148-0.158,0.224-0.236c7.278-7.548,19.263-7.87,26.936-0.724c67.198,62.83,67.198,165.143,0,227.971V542.064z"/>
+                </svg>
+            </span>
+            <input type="range" class="volume-bar" id="volume" min="0" max="1" step="0.01" value="1">
+        </div>
+        </div>
+        </div>
+    <script src="script.js"></script>
+
+</body> </html> 
