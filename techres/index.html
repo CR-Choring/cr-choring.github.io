@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教师资源 - 双微教育传媒</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 引用单独的CSS文件 -->
+    <link rel="icon" href="../res/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../icons/css/all.min.css"> <!-- 修改路径 -->
+    <script type="text/javascript">
+        //处理键盘事件 禁止后退键（Backspace）密码或单行、多行文本框除外
+        function forbidBackSpace(e) {
+            var ev = e || window.event; //获取event对象 
+            var obj = ev.target || ev.srcElement; //获取事件源 
+            var t = obj.type || obj.getAttribute('type'); //获取事件源类型 
+            //获取作为判断条件的事件类型 
+            var vReadOnly = obj.readOnly;
+            var vDisabled = obj.disabled;
+            //处理undefined值情况 
+            vReadOnly = (vReadOnly == undefined) ? false : vReadOnly;
+            vDisabled = (vDisabled == undefined) ? true : vDisabled;
+            //当敲Backspace键时，事件源类型为密码或单行、多行文本的， 
+            //并且readOnly属性为true或disabled属性为true的，则退格键失效 
+            var flag1 = ev.keyCode == 8 && (t == "password" || t == "text" || t == "textarea") && (vReadOnly == true || vDisabled == true);
+            //当敲Backspace键时，事件源类型非密码或单行、多行文本的，则退格键失效 
+            var flag2 = ev.keyCode == 8 && t != "password" && t != "text" && t != "textarea";
+            //判断 
+            if (flag2 || flag1) return false;
+        }
+        //禁止后退键 作用于Firefox、Opera
+        document.onkeypress = forbidBackSpace;
+        //禁止后退键  作用于IE、Chrome
+        document.onkeydown = forbidBackSpace;
+</script>
+
+<style>
+    /* 禁止选择整个页面的文字 */
+    * {
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+ */
+        user-select: none; /* 标准语法 */
+    }
+</style>
+
+</head>
+<script>
+    if (window.innerWidth <= 768) {
+        // 移动端
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'mobile-styles.css';
+        document.head.appendChild(link);
+    } else {
+        // 电脑端
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'desktop-styles.css';
+        document.head.appendChild(link);
+    }
+</script>
+
+<script>
+    // 监听键盘事件并阻止其默认行为
+    document.addEventListener('keydown', function(event) {
+        event.preventDefault(); // 阻止键盘事件的默认行为
+    });
+
+    document.addEventListener('keyup', function(event) {
+        event.preventDefault(); // 阻止键盘事件的默认行为
+    });
+
+    document.addEventListener('keypress', function(event) {
+        event.preventDefault(); // 阻止键盘事件的默认行为
+    });
+</script>
+
+<script>
+    // 监听右键点击事件
+    document.addEventListener('contextmenu', function(event) {
+        event.preventDefault(); // 阻止右键菜单的显示
+    });
+</script>
+    <body oncontextmenu=self.event.returnValue=false></body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="../index.html"> <!-- 添加点击事件，跳转到主页 -->
+                    <img src="../res/logow.svg" alt="Logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <div class="white-rectangle">
+            
+            <div class="book-div">
+                <div class="left-half">
+                    <img src="../res/book/2025/ljzkyy.svg" alt="书籍封面" class="book-image">
+                </div>
+                <div class="right-half">
+                    <div class="book-title">闽教中心 2025连接中考 
+                    <p class="book-class">英语学科</p>
+                    <p class="book-author">福建省宏图伟业文化发展有限公司</p></div>
+                </div>
+                <a href="res/2025/HTWY/LJZK/ENG/index.html" class="resource-link"> <i class="fa fa-ban"></i>
+                </a>
+            </div>
+
+            <div class="book-div">
+                <div class="left-half">
+                    <img src="../res/book/2025/双微升学通.svg" alt="书籍封面" class="book-image">
+                </div>
+                <div class="right-half">
+                    <div class="book-title">双微教育集团 2025福建中考 双微升学通
+                    <p class="book-class">英语学科 （5月模拟卷教师用书）</p>
+                    <p class="book-author">双微教育研究院 双微教育教学考试科学研究开发中心</p></div>
+                </div>
+                <a href="https://1drv.ms/u/c/6b5de22b35472e3f/EQjWE8s0GqZJqC5l8M-KvBgB49jgDwntEZ9qYfdt-0fjIw?e=7K3Nqo" class="resource-link"> <i class="fa fa-arrow-right"></i>
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>版权所有·未经本公司书面许可严禁任何人以任何方式直接或间接使用任何手段以任何方式使用本公司任何产品的任何部分用于任何用途·违者必究</p>
+        <p>本网站所有数据及文档均受《著作权法》及相关法律法规保护，任何组织及个人不得侵权，违者本公司将严厉依法追究侵权责任，特此声明。</p>
+        <p>Copyright reserved. Without the prior written permission of our company, no person shall directly or indirectly use any means to utilize any part of our company's products for any purpose in any way. Violators will be prosecuted.</p>
+        <p>All data and documents on this website are protected by the Copyright Law and relevant laws and regulations. No organization or individual may infringe upon them. </p>
+        <p>The company will severely investigate and hold violators liable for infringement, hereby declared.</p>
+        <p>&copy; copyright 2025 双微集团 版权所有. All rights reserved of Choring Gruop.</p>
+        <p>双微教育研究院 出版部 信息技术部 学院部 排版设计部</p>
+    </footer>
+
+    <!-- 脚本 -->
+    <script src="scripts.js"></script> <!-- 引用单独的JavaScript文件 -->
+</body>
+</html>
